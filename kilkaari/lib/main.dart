@@ -1,7 +1,21 @@
-import 'package:flutter/material.dart';
-import 'package:kilkaari/routes.dart';
+// ignore_for_file: avoid_print
 
-void main() {
+import 'package:flutter/material.dart';
+import 'package:kilkaari/getPermissions.dart';
+import 'package:kilkaari/routes.dart';
+import 'dbConnection.dart';
+
+Future<void> main() async {
+  await dbConnection.connect();
+  print("iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiuuuuuuuuuuuuuuuuuulllll");
+  // bool permissionsGranted = await PermissionHandler.requestPermissions();
+  // if (permissionsGranted) {
+  //   // Permissions granted, proceed with your functionality
+  //   print('Permissions granted');
+  // } else {
+  //   // Permissions not granted, handle accordingly
+  //   print('Permissions not granted');
+  // }
   runApp(const MyApp());
 }
 
